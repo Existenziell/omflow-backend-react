@@ -1,0 +1,147 @@
+/* --------------------------------------------------------
+Style Sheet for Omflow World Map
+
+version: 0.9
+last modified: 20.09.2020 by Christof Bauer
+author: Christof Bauer
+email: bauer.christof@gmail.com
+----------------------------------------------------------*/
+
+@import 'defaults';
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+.sidebar {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  background-color: #404040;
+  color: #ffffff;
+  z-index: 1;
+  padding: 6px;
+  font-weight: bold;
+}
+
+.mapboxgl-popup {
+  min-width: 50%;
+  overflow: hidden;
+}
+
+.mapboxgl-popup-content {
+  padding: 12px;
+}
+
+.mapboxgl-popup-content a {
+  text-decoration: none;
+  color: $blue;
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 20px;
+}
+
+.popup {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0px 0px 10px;
+  }
+  h2 {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  span {
+    font-size: 11px;
+    margin: 10px 0px 0px;
+  }
+  div {
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: left center;
+    // width: 100%;
+    // height: 0;
+    // padding-top: 56.25%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  // @for $i from 0 through 18 {
+  //   .popup-img-#{$i} {
+  //     background-image: url('/img/teachers/#{$i}.jpg');
+  //   }
+  // }
+
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-align: center;
+}
+
+.overlay-button {
+  width: 100px;
+  height: 60px;
+  background: rgba(60,150,185,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.overlay-button:hover {
+  background: rgba(35, 122, 154, 0.8);
+  cursor: pointer;
+}
+
+.overlay-hide {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 18px;
+  }
+}
+
+.back-home {
+  background: transparent url('/img/icons/back.png') no-repeat center;
+  width: 70px;
+  height: 71px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  opacity: 0.85;
+  z-index: 1000;
+  text-indent: -9999em;
+}
+
+.back-home:hover {
+  cursor: pointer;
+  opacity: 1;
+}
